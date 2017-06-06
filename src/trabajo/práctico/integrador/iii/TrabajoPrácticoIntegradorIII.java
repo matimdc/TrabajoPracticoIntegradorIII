@@ -17,7 +17,6 @@ public class TrabajoPrácticoIntegradorIII {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int contador = 0;
         int opcion;
 
         char[][] planilla = {
@@ -33,6 +32,7 @@ public class TrabajoPrácticoIntegradorIII {
 
         String[] apellidos = {"Alberti", "Azcuénaga", "Belgrano", "Castelli", "Larrea",
             "Matheu", "Moreno", "Paso", "Saavedra"};
+
         System.out.println("1");
         System.out.println("2");
         System.out.println("3");
@@ -43,46 +43,42 @@ public class TrabajoPrácticoIntegradorIII {
         switch (opciones) {
 
             case 1:
-                
-                
+
                 break;
             case 2:
-                
-                
-                
+
                 break;
             case 3:
-                
-                
-                
+
                 break;
             case 4:
-                 for (int filaAlumnos = 0; filaAlumnos < planilla.length; filaAlumnos++) {
-            for (int columnaClases = 0; columnaClases < planilla[0].length; columnaClases++) {
-                //System.out.print(llegadasTardes[i][j] + "\t");
-                if (planilla[filaAlumnos][columnaClases] == 'T') {
-                    contador++;
-                }
-            }
-
-            // System.out.println("");  baja una linea en cada conteo
-        }
-                 System.out.println("el total de llegadas tade es: " + contador);
+                 opcion4(planilla);
                 break;
 
         }
 
-       
         for (int filaNombres = 0; filaNombres < apellidos.length; filaNombres++) {
             System.out.print(apellidos[filaNombres]);
             System.out.println("");
         }
 
-        
-
-        
-        
-        
     }
 
+    
+    
+    static void opcion4(char[][] a){
+                      int contador = 0;
+
+     for (int filaAlumnos = 0; filaAlumnos < a.length; filaAlumnos++) {
+                    for (int columnaClases = 0; columnaClases < a[0].length; columnaClases++) {
+                        //System.out.print(llegadasTardes[i][j] + "\t");
+                        if (a[filaAlumnos][columnaClases] == 'T') {
+                            contador++;
+                        }
+                    }
+
+                    // System.out.println("");  baja una linea en cada conteo
+                }
+                System.out.println("el total de llegadas tade es: " + contador);    
+    }
 }
